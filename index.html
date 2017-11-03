@@ -26,7 +26,6 @@
         <link href='http://fonts.googleapis.com/css?family=Dosis:200,300,400,500|Lato:300,400,700,900,300italic,400italic,700italic,900italic|Raleway:400,200,300,500,100|Titillium+Web:400,200,300italic,300,200italic' rel='stylesheet' type='text/css'>
 
         <script src="assets/js/modernizr.js"></script>
-
     </head>
     <body id="body">
         <!--[if lt IE 7]>
@@ -365,22 +364,36 @@
                         </div>
                         <div class="col-sm-6">
                             <h2 class="con-title">Drop a line</h2>
-                            <form role="form">
+                            <form role="form" id="gform" method="POST" action="https://script.google.com/macros/s/AKfycbxSeGbz1XRJ9z8GDfL15OFxFpxACwwxxJtEjtsWNVKo8O9cTQ0/exec">
                               <div class="form-group">
-                                <input type="text" class="form-control" id="user_name" placeholder="Enter your name">
+                                <input class="form-control" id="name" name="name" placeholder="Enter your name" name="name">
                               </div>
                               <div class="form-group">
-                                <input type="email" class="form-control" id="your_email" placeholder="Enter your email">
+                                <input class="form-control" id="email" name="email" placeholder="Enter your email" name="email">
                               </div>
                               <div class="form-group">
-                                <textarea name="InputMessage" id="user_message" class="form-control" rows="5" required></textarea>
+                                <textarea id="message" name="message" class="form-control" rows="5"  required></textarea>
                               </div>
 
                               <button type="submit" class="btn medium">Let me know</button>
-                            </form>   
+                                
+                                
+                            </form>  
+                            <div style="display:none; color: whitesmoke" id="thankyou_message">
+                                    <h2><em>Thanks for contacting!
+                                        I will get back to you soon!</em></h2>
+                                </div>
                         </div>
                     </div>
+                    
+ 
                 </div><!-- container -->
+<!--
+                <div style="display:none;" id="thankyou_message">
+                <h2><em>Thanks</em> for contacting!
+                    I will get back to you soon!</h2>
+                    </div>
+-->
             </div><!-- contact-area -->
             <div id="social">
                 <div class="container">
@@ -423,6 +436,9 @@
         <script src="assets/js/smooth-scroll.js"></script>
         <script src="assets/js/owl.carousel.js"></script>
         <script src="assets/js/script.js"></script>
+    
+       <script data-cfasync="false" type="text/javascript"
+  src="https://cdn.rawgit.com/dwyl/html-form-send-email-via-google-script-without-server/master/form-submission-handler.js"></script>
 
     </body>
 </html>
